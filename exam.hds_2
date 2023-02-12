@@ -1,0 +1,27 @@
+# hades.models.Design file
+#  
+[name] unnamed
+[components]
+hades.models.io.Ipin D 10200 7200 @N 1001 null U
+hades.models.io.Ipin C 10200 9600 @N 1001 null U
+hades.models.io.Ipin B 10200 12000 @N 1001 null U
+hades.models.io.Ipin A 10200 14400 @N 1001 null U
+hades.models.gates.InvSmall i4 10500 15000 @N 1001 5.0E-9
+hades.models.gates.InvSmall i3 10500 12600 @N 1001 5.0E-9
+hades.models.gates.InvSmall i2 10500 10200 @N 1001 5.0E-9
+hades.models.gates.InvSmall i1 10500 7800 @N 1001 5.0E-9
+hades.models.gates.And2 B\u002aD 14100 10200 @N 1001 1.0E-8
+hades.models.gates.Xor2 C\u002aD\u0028A\u005eB\u0029 18900 7800 @N 1001 1.0E-8
+hades.models.gates.And3 B\u0027\u002aC\u0027\u002aD\u0027 13500 4200 @N 1001 1.0E-8
+hades.models.gates.And2 C\u002aD 13800 7800 @N 1001 1.0E-8
+[end components]
+[signals]
+hades.signals.SignalStdLogic1164 n6 3 C*D Y C*D(A^B) A C*D(A^B) B 5 2 17400 9000 18600 9000 2 18600 9000 18600 8400 2 18600 8400 18900 8400 2 18600 9000 18600 9600 2 18600 9600 18900 9600 1 18600 9000 
+hades.signals.SignalStdLogic1164 n5 2 i1 Y B'*C'*D' A 2 2 12300 8400 12300 4800 2 12300 4800 13500 4800 0 
+hades.signals.SignalStdLogic1164 n4 2 i3 Y B'*C'*D' C 3 2 12300 13200 12600 13200 2 12600 13200 12600 6000 2 12600 6000 13500 6000 0 
+hades.signals.SignalStdLogic1164 n3 2 i2 Y B'*C'*D' B 3 2 12300 10800 12900 10800 2 12900 10800 12900 5400 2 12900 5400 13500 5400 0 
+hades.signals.SignalStdLogic1164 n2 3 C Y C*D B i2 A 3 2 10500 9600 13800 9600 2 10200 9600 10500 9600 2 10500 9600 10500 10800 1 10500 9600 
+hades.signals.SignalStdLogic1164 n1 3 B Y B*D B i3 A 4 2 10500 12000 13800 12000 2 13800 12000 14100 12000 2 10200 12000 10500 12000 2 10500 12000 10500 13200 1 10500 12000 
+hades.signals.SignalStdLogic1164 n0 4 D Y B*D A i1 A C*D A 7 2 10500 7200 13200 7200 2 13200 8400 13200 10800 2 13200 10800 14100 10800 2 10200 7200 10500 7200 2 10500 7200 10500 8400 2 13200 7200 13200 8400 2 13200 8400 13800 8400 2 13200 8400 10500 7200 
+[end signals]
+[end]
